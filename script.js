@@ -34,3 +34,25 @@ submit.addEventListener("click",(e)=>{
 	getWeather(city.value)
 })
 getWeather("Jaipur")
+const displayWeather = (city) => {
+	const url = "https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=" + city;
+	fetch(url, options).then(response=>response.json()).then((response) => {
+
+		console.log(response);
+		eval("cloud_pct_"+city).innerHTML = response.cloud_pct
+		eval("temp_"+city).innerHTML = response.temp
+		eval("feels_like_"+city).innerHTML = response.feels_like
+		eval("humidity_"+city).innerHTML = response.humidity
+		eval("min_temp_"+city).innerHTML = response.min_temp
+		eval("max_temp_"+city).innerHTML = response.max_temp
+		eval("wind_speed_"+city).innerHTML = response.wind_speed
+		eval("wind_degrees_"+city).innerHTML = response.wind_degrees
+		eval("sunrise_"+city).innerHTML = response.sunrise
+		eval("sunset_"+city).innerHTML = response.sunset
+	})
+}
+
+displayWeather("Kolkata")
+displayWeather("Bengaluru")
+displayWeather("Mumbai")
+displayWeather("Chennai")
