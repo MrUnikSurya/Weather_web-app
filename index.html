@@ -26,7 +26,7 @@
                   Common Cities
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Delhi</a></li>
+                  <li><a class="dropdown-item" href="#" >Delhi</a></li>
                   <li><a class="dropdown-item" href="#">Jaipur</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">Ajmer</a></li>
@@ -37,28 +37,27 @@
               </li>
             </ul>
             <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="city">
+              <button class="btn btn-outline-success" type="submit" id="submit">Search</button>
             </form>
           </div>
         </div>
       </nav>
-      <h1 class="my-4 text-center">Weather for delhi</h1>
+      <h1 class="my-4 text-center">Weather for <span id="cityName"></span></h1>
       <div class="container">
         <main>
             <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
               <div class="col">
                 <div class="card mb-4 rounded-3 shadow-sm">
                   <div class="card-header py-3">
-                    <h4 class="my-0 fw-normal">Free</h4>
+                    <h4 class="my-0 fw-normal">Tempretures</h4>
                   </div>
                   <div class="card-body">
-                    <h1 class="card-title pricing-card-title">$0<small class="text-body-secondary fw-light">/mo</small></h1>
+                    <h1 class="card-title pricing-card-title"><span id="temp2"></span><small class="text-body-secondary fw-light">°C</small></h1>
                     <ul class="list-unstyled mt-3 mb-4">
-                      <li>10 users included</li>
-                      <li>2 GB of storage</li>
-                      <li>Email support</li>
-                      <li>Help center access</li>
+                      <li>Tempreture is: <span id="temp"></span></li>                      
+                      <li>Min Tempreture is: <span id="min_temp"></span></li>                      
+                      <li>Max Tempreture is: <span id="max_temp"></span></li>                      
                     </ul>
                     <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
                   </div>
@@ -67,15 +66,14 @@
               <div class="col">
                 <div class="card mb-4 rounded-3 shadow-sm">
                   <div class="card-header py-3">
-                    <h4 class="my-0 fw-normal">Pro</h4>
+                    <h4 class="my-0 fw-normal">Humidity Info</h4>
                   </div>
                   <div class="card-body">
-                    <h1 class="card-title pricing-card-title">$15<small class="text-body-secondary fw-light">/mo</small></h1>
+                    <h1 class="card-title pricing-card-title"><span id="humidity2"></span><small class="text-body-secondary fw-light"> %</small></h1>
                     <ul class="list-unstyled mt-3 mb-4">
-                      <li>20 users included</li>
-                      <li>10 GB of storage</li>
-                      <li>Priority email support</li>
-                      <li>Help center access</li>
+                      <li>Humidity is: <span id="humidity"></span></li>
+                      <li>Cloud PCT is: <span id="cloud_pct"></span></li>
+                      <li>Feels Like: <span id="feels_like"></span></li>
                     </ul>
                     <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
                   </div>
@@ -84,15 +82,15 @@
               <div class="col">
                 <div class="card mb-4 rounded-3 shadow-sm border-primary">
                   <div class="card-header py-3 text-bg-primary border-primary">
-                    <h4 class="my-0 fw-normal">Enterprise</h4>
+                    <h4 class="my-0 fw-normal">Sun & Wind</h4>
                   </div>
                   <div class="card-body">
-                    <h1 class="card-title pricing-card-title">$29<small class="text-body-secondary fw-light">/mo</small></h1>
+                    <h1 class="card-title pricing-card-title"><span id="wind_speed2"></span><small class="text-body-secondary fw-light"> km/hr</small></h1>
                     <ul class="list-unstyled mt-3 mb-4">
-                      <li>30 users included</li>
-                      <li>15 GB of storage</li>
-                      <li>Phone and email support</li>
-                      <li>Help center access</li>
+                      <li>wind speed is: <span id="wind_speed"></span></li>
+                      <li>wind degrees is: <span id="wind_degrees"></span></li>
+                      <li>Sunrise: <span id="sunrise"></span></li>
+                      <li>Sunset: <span id="sunset"></span></li>
                     </ul>
                     <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
                   </div>
